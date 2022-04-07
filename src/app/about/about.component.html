@@ -1,0 +1,71 @@
+<div class="container"
+     fxLayout="column"
+     fxLayoutGap="10px">
+
+  <div fxFlex>
+    <div>
+      <h3>About Us</h3>
+      <hr>
+    </div>
+  </div>
+
+  <div fxFlex>
+    <div fxLayout="column" fxLayout.gt-sm="row">
+      <div fxFlex="70">
+        <h2>Our History</h2>
+        <p>history history history history history history history history history fehfhehqhpwfhq history. history history history history history history.  history historyhistory history history history us.</p>
+        <p>history history qhfhfdqwfoqwdfiq ehfiohfihfigoihh history history, cagfugfgfuegfiegif a history history, history history history history.</p>
+      </div>
+      <div fxFlex="30">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>
+              <h2>Facts At a Glance</h2>
+            </mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <dl>
+              <dt>Started</dt>
+              <dd>4 Feb. 2020</dd>
+              <dt>Major Stake Holder</dt>
+              <dd>enfnejfnek.</dd>
+              <dt>fjefjefjwfkwf</dt>
+              <dd>$1,250,375</dd>
+              <dt>Employees</dt>
+              <dd>40</dd>
+            </dl>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+
+  <div fxFlex>
+    <mat-card>
+      <blockquote>
+        <h3>some text some text some text
+          some text some text.</h3>
+        <footer>-- Leonnel Z,
+          <cite>essen ist wichtig essen ist wichtig,
+            P. kommende Buch, 2030</cite>
+        </footer>
+      </blockquote>
+    </mat-card>
+  </div>
+
+
+  <div fxFlex *ngIf="leader">
+    <h2>Corporate Leadership</h2>
+    <mat-list *ngIf="leader">
+      <mat-list-item *ngFor="let lead of leader">
+        <img matListAvatar src="{{lead.image}}" alt="{{lead.name}}">
+        <p matLine><span>{{lead.name}}</span></p>
+        <p matLine><span>{{lead.designation}}</span></p>
+        <p matLine><span>{{lead.description}}</span></p>
+      </mat-list-item>
+    </mat-list>
+  </div>
+  <div [hidden]="leader">
+    <mat-spinner></mat-spinner><h4>Loading . . . Please wait</h4>
+  </div>
+</div>
